@@ -17,6 +17,9 @@ Server.use(cors());
 
 // Connect to MongoDB
 connectToDatabase();
+Server.get("/", (req, res) => {
+  res.send("✅ Todo API is running");
+});
 
 // Routes
 Server.use("/api", TaskRouter);
